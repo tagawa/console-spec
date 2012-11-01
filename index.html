@@ -142,9 +142,18 @@
         represents a means for programatically writing output
         <a title="payload">payloads</a>
         to a console.</p>
+        
+      <pre class="idl">interface <dfn id="console">Console</dfn> {
+        void <a href="#console-log" title="Console-log">log</a>(any message, optional DOMString options);
+        void <a href="#console-debug" title="Console-debug">debug</a>(any message, optional DOMString options);
+        void <a href="#console-info" title="Console-info">info</a>(any message, optional DOMString options);
+        void <a href="#console-warn" title="Console-warn">warn</a>(any message, optional DOMString options);
+        void <a href="#console-error" title="Console-error">error</a>(any message, optional DOMString options);
+        void <a href="#console-assert" title="Console-assert">assert</a>(boolean expression, optional DOMString options);
+      };</pre>
 
       <dl title='interface Console' class='idl'>
-        <dt>void log (in any... args)</dt>
+        <dt id="console-log"><code>void log (in any... args)</code></dt>
         <dd>
           <a title="output a payload">Outputs a payload</a>
           to the console, with the value of its
@@ -153,7 +162,7 @@
           <a>permits format string</a>,
           <a>writes to stdout</a></span>
         </dd>
-        <dt>void debug (in any... args)</dt>
+        <dt id="console-debug"><code>void debug(in any... args)</code></dt>
         <dd>
           <a title="output a payload">Outputs a payload</a>
           to the console, with the value of its
@@ -166,7 +175,7 @@
           <a>permits format string</a>,
           <a>writes to stderr</a></span>
         </dd>
-        <dt>void info (in any... args)</dt>
+        <dt id="console-info"><code>void info (in any... args)</code></dt>
         <dd>
           <a title="output a payload">Outputs a payload</a>
           to the console, with the value of its
@@ -183,7 +192,7 @@
           <a>permits format string</a>,
           <a>writes to stderr</a></span>
         </dd>
-        <dt>void warn (in any... args)</dt>
+        <dt id="console-warn"><code>void warn (in any... args)</code></dt>
         <dd>
           <a title="output a payload">Outputs a payload</a>
           to the console, with the value of its
@@ -200,7 +209,7 @@
           <a>permits format string</a>,
           <a>writes to stderr</a></span>
         </dd>
-        <dt>void error (in any... args)</dt>
+        <dt id="console-error"><code>void error (in any... args)</code></dt>
         <dd>
           <a title="output a payload">Outputs a payload</a>
           to the console, with the value of its
@@ -217,7 +226,7 @@
           <a>permits format string</a>,
           <a>writes to stderr</a></span>
         </dd>
-        <dt>void assert (boolean expression, in any... args)</dt>
+        <dt id="console-assert"><code>void assert (boolean expression, in any... args)</code></dt>
         <dd>
           Tests whether the boolean <var>expression</var> argument evaluates to
           <code>true</code>; and, if <var>expression</var> does not evaluate to
